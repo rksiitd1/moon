@@ -199,10 +199,10 @@ const App = () => {
             <h2 className="text-3xl font-bold text-center mb-12 text-gray-800 dark:text-gray-200">Meet Our Innovators</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
-                { name: 'Jagadish Rath', role: 'Founder & Architect', experience: '15+ years in tech, IIT Delhi alumnus' },
-                { name: 'Anantha C', role: 'UX Design', experience: '10 years shaping user experiences' },
-                { name: 'Gopal K Rath', role: 'Software Engineering', experience: '7+ years of innovative contributions' },
-                { name: 'Sushrita Setty', role: 'Experience Design', experience: '10+ years creating engaging interfaces' },
+                { name: 'Jagadish Rath', role: 'Founder & Architect', experience: '15+ years in tech, IIT Delhi alumnus', image: "https://moontropy.com/images/jagadish_pic.png" },
+                { name: 'Anantha C', role: 'UX Design', experience: '10 years shaping user experiences', image: "https://moontropy.com/images/anantha_pic.png" },
+                { name: 'Gopal K Rath', role: 'Software Engineering', experience: '7+ years of innovative contributions', image: "https://moontropy.com/images/gopal_pic.png" },
+                { name: 'Sushrita Setty', role: 'Experience Design', experience: '10+ years creating engaging interfaces', image: "https://moontropy.com/images/sushrita_pic.png" },
               ].map((member, index) => (
                 <motion.div
                   key={index}
@@ -211,7 +211,7 @@ const App = () => {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg text-center"
                 >
-                  <img src={`/api/placeholder/150/150?text=${member.name}`} alt={member.name} className="w-32 h-32 rounded-full mx-auto mb-4" />
+                  <img src={member.image} alt={member.name} className="w-40 h-40 rounded-full mx-auto mb-4" />
                   <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-200">{member.name}</h3>
                   <p className="text-blue-600 dark:text-blue-400 mb-2">{member.role}</p>
                   <p className="text-gray-600 dark:text-gray-400 text-sm">{member.experience}</p>
@@ -225,7 +225,7 @@ const App = () => {
           <div className="container mx-auto px-6">
             <h2 className="text-3xl font-bold text-center mb-12 text-gray-800 dark:text-gray-200">Our Clients</h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {['Flipkart', 'Honeywell', 'Client 3', 'Client 4'].map((client, index) => (
+              {['Flipkart', 'Honeywell', 'JP Morgan', 'Myntra'].map((client, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, scale: 0.8 }}
